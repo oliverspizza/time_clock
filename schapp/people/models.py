@@ -39,3 +39,5 @@ class CustomUser(AbstractUser):
 
 # need ability to add payment for master of location
 # limit number og profiles per group, more profiles higher cost
+
+#need api file with validator and serilzers
