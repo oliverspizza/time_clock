@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'schedule.apps.ScheduleConfig',
     'timeClock.apps.TimeclockConfig',
-    'people.apps.PeopleConfig'
+    'people.apps.PeopleConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
