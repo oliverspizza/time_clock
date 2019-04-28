@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import (custom_user_list,
-                          custom_user_detail)
+from . import views
 
 urlpatterns = [
     path('', views.custom_user_list),
