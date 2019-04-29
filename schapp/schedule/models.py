@@ -1,5 +1,5 @@
 from django.db import models
-from people.models import Employee
+from people.models import CustomUser
 
 class Job(models.Model):
     #creates positions for selection
@@ -9,7 +9,7 @@ class Job(models.Model):
                ('crew','Inside Crew'),
                ('supervisor','Open/Close'),
                )
-    employee_name = models.ForeignKey(Employee,
+    employee_name = models.ForeignKey(CustomUser,
                                       on_delete=models.CASCADE)
     postion = models.CharField(max_length=30,
                                choices=POSITION_CHOICE)
@@ -23,4 +23,4 @@ class Shift(models.Model):
     date = models.DateField("Date:")
     start_shift = models.TimeField("Start time:")
     end_shift = models.TimeField("End Time:")
-    employee_name = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    employee_name = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
